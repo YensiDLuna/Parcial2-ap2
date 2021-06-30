@@ -1,7 +1,7 @@
-﻿<h3>cClientes</h3>
+﻿<h3>cVentas</h3>
 
 @code {
-    @page "/cClientes"
+    @page "/cVentas"
 
 
 
@@ -12,38 +12,38 @@
 
 
 
-    <EditForm Model="Clientes" OnValidSubmit="BuscarClientes">
+    <EditForm Model="Ventas" OnValidSubmit="BuscarVentas">
         <DataAnnotationsValidator />
         <div class="card ">
             <div class="card-header">
-                <h3>Consulta de Clientes</h3>
+                <h3>Consulta de Ventas</h3>
             </div>
 
             <table class="table table-secondary">
                 <thead class="thead-dark">
                     <tr>
                         <th>Id:</th>
-                        <th>Nombre:</th>
+                        <th>Monto:</th>
 
                     </tr>
                 </thead>
                 <tbody class="bg-transparent">
-                    @foreach (var item in Clientes)
-                                                                                        {
+                    @foreach (var item in Ventas)
+                                                                                                            {
                     <tr>
-                        <td>@item.ClienteId</td>
+                        <td>@item.VentaId</td>
 
-                        <td>@item.Nombres</td>
+                        <td>@item.Monto</td>
 
                     </tr>
-                                                                                        }
+                                                                                                            }
                 </tbody>
             </table>
         </div>
     </EditForm>
 
-    @code { 
-        private List<Clientes> clientes = new List<Clientes>() { };
+    @code {
+private List<Ventas> ventas = new List<Ventas>() { };
 
 
 protected override void OnInitialized()
@@ -55,9 +55,9 @@ protected override void OnInitialized()
 
 private void Buscar()
 {
-            var encontrado = ClientesBLL.GetList(c => true);
+            var encontrado = VentasBLL.GetList(c => true);
             if (encontrado != null)
-                this.clientes = encontrado;
+                this.ventas = encontrado;
 } }
 
 }
