@@ -7,8 +7,8 @@ namespace Parcial2_ap2.Models
 {
     public class Ventas
     {
-    [Key]
-        public int VentaId { get; set; }
+       [Key]
+        public int VentasId { get; set; }
         public DateTime Fecha { get; set; }
         public int ClienteId { get; set; }
         public double Monto { get; set; }

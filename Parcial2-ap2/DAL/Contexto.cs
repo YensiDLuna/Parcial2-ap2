@@ -4,16 +4,16 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Parcial2_ap2.Models;
 
 namespace Parcial2_ap2.DAL
 {
     public class Contexto: DbContext
     {
-      
 
-      
+        public DbSet<Clientes> Clientes { get; set; }
+        public DbSet<Ventas> Ventas { get; set; }
 
-  
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             {
