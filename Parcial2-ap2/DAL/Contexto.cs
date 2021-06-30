@@ -9,28 +9,11 @@ namespace Parcial2_ap2.DAL
 {
     public class Contexto: DbContext
     {
-        public class Clientes
-        {
-            [Key]
-            public int ClienteId { get; set; }
-            public string Nombres { get; set; }
-        }
+      
 
-        public class Ventas
-        {
-            [Key]
-            public int VentaId { get; set; }
-            public DateTime Fecha { get; set; }
-            public int ClienteId { get; set; }
-            public double Monto { get; set; }
-            public double Balance { get; set; }
-        }
+      
 
-     //ESTO VA EN EL CONTEXTO.
-
-   
-
-
+  
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             {
