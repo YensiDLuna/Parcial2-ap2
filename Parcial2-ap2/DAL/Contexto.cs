@@ -13,7 +13,7 @@ namespace Parcial2_ap2.DAL
 
         public DbSet<Clientes> Clientes { get; set; }
         public DbSet<Ventas> Ventas { get; set; }
-
+        public DbSet<Cobros> Cobros { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             {
