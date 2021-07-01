@@ -1,4 +1,4 @@
-﻿@page "/cClientes"
+﻿@page "/Clientes"
 
 @using Parcial2_ap2.BLL;
 @using Parcial2_ap2.Models;
@@ -34,7 +34,7 @@
 
 
             <div class="col-sm-8">
-                <input class="form-control w-100" type="text" )" @bind-value="Criterio" placeholder="Ingrese el Dato  para obtener el  cliente" />
+                <input class="form-control w-100" type="@(Index == 1 ? "number" : "text")" @bind-value="Criterio" placeholder="Ingrese el Dato  para obtener el  cliente" />
             </div>
 
 
@@ -68,14 +68,7 @@
                                 <td>@cont.ClienteId</td>
                                 <td>@cont.Nombre</td>
 
-                                <td>
-                                    <button class="btn btn-info">
-                                        <i class="oi oi-pencil" aria-hidden="true"></i>
-                                    </button>
-                                    <button class="btn  btn-danger">
-                                        <i class="oi oi-trash" aria-hidden="true"></i>
-                                    </button>
-                                </td>
+                                
                             </tr>
 
                         }
