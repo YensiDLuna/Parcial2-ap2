@@ -14,7 +14,7 @@
 
     <div class="card">
         <div class="card-header ">
-            <h1>Regisro de Cobros</h1>
+            <h1>Registro de Cobros</h1>
         </div>
         <div class="card-body">
 
@@ -48,7 +48,7 @@
                     {
                         <option value="@item.ClienteId">@item.Nombre</option>}
                 </InputSelect>
-              
+                <ValidationMessage For="(() => Cobro.ClienteId)" />
             </div>
             <div class="card-header ">
                 <h3>Cobros Detalle</h3>
@@ -65,7 +65,7 @@
                             <th>Pagar</th>
                         </tr>
                     </thead>
-                    <tbody class="bg-white">
+                    <tbody class="bg-primary">
                         @foreach (var item in Cobro.Detalle)
                         {
                             <tr>
@@ -196,15 +196,15 @@
 
                     if (guardado)
                     {
-                        Toast.ShowSuccess("se Guardo correctamente");
+                        Toast.ShowSuccess("Se Guardo correctamente");
                         Nuevo();
                     }
                     else
-                        Toast.ShowError("no se guardo correctamente");
+                        Toast.ShowError("No se pudo guardar correctamente");
 
                 }
                 else
-                    Toast.ShowWarning("no se puede modificar el cobro");
+                    Toast.ShowWarning("No se puede modificar el cobro");
             }
 
             private void Cobrar(CobrosDetalle cobrosDetalle)
